@@ -61,7 +61,7 @@ pipeline {
         stage('Deploy to Production') {
             steps {
                 script {
-                    echo 'Deploying to AWS EC2 production environment'           
+                    echo 'Deploying to production environment'           
                 }
             }
         }
