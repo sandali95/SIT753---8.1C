@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    echo 'Building the application with Maven...'
+                    echo 'Building the application'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
         stage('Unit and Integration Tests') {
             steps {
                 script {
-                    echo 'Running unit tests with JUnit and integration tests with TestNG...'
+                    echo 'Running unit tests with JUnit and integration tests'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage('Code Analysis') {
             steps {
                 script {
-                    echo 'Running code analysis with SonarQube...'
+                    echo 'Running code analysis'
                     
                 }
             }
@@ -34,7 +34,7 @@ pipeline {
         stage('Security Scan') {
             steps {
                 script {
-                    echo 'Running security scan with OWASP Dependency Check...'
+                    echo 'Running security scan.'
                 }
             }
         }
@@ -43,7 +43,7 @@ pipeline {
         stage('Deploy to Staging') {
             steps {
                 script {
-                    echo 'Deploying to AWS EC2 staging environment...'
+                    echo 'Deploying to AWS EC2 staging environment.'
                 }
             }
         }
@@ -52,7 +52,7 @@ pipeline {
         stage('Integration Tests on Staging') {
             steps {
                 script {
-                    echo 'Running integration tests on staging environment with Selenium...'
+                    echo 'Running integration tests.'
                 }
             }
         }
