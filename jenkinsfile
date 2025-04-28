@@ -70,7 +70,6 @@ pipeline {
     post {
         always {
             echo 'Pipeline completed - cleaning up.'
-            cleanWs()
         }
         success {
             echo 'Pipeline succeeded!'
