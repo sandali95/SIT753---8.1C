@@ -67,7 +67,7 @@ pipeline {
         }
     }
 
-    //post scripts 
+    //post scripts 2
     post {
         always {
             echo 'Pipeline completed - cleaning up.'
