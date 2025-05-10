@@ -2,7 +2,7 @@ pipeline {
     agent any
  
     stages {
-        // Stage 1: Build
+        // Stage 1: Build stage
         stage('Build') {
             steps {
                 script {
@@ -11,7 +11,7 @@ pipeline {
             }
         }
         
-        // Stage 2: Unit and Integration Tests
+        // Stage 2: Unit and Integration Tests stage
         stage('Unit and Integration Tests') {
             steps {
                 script {
