@@ -2,7 +2,7 @@ pipeline {
     agent any
  
     stages {
-        // Stage 1: Build stage
+        // Stage 1: Build
         stage('Build') {
             steps {
                 script {
@@ -11,11 +11,11 @@ pipeline {
             }
         }
         
-        // Stage 2: Unit and Integration Tests stage
+        // Stage 2: Unit and Integration Tests
         stage('Unit and Integration Tests') {
             steps {
                 script {
-                    echo 'Running unit tests with JUnit and integration tests'
+                    echo 'Running unit tests with JUnit.'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage('Code Analysis') {
             steps {
                 script {
-                    echo 'Running code analysis'
+                    echo 'Running code analysis with SonarQube.'
                     
                 }
             }
@@ -34,7 +34,7 @@ pipeline {
         stage('Security Scan') {
             steps {
                 script {
-                    echo 'Running security scan.'
+                    echo 'Running security scan with OWASP ZAP.'
                 }
             }
         }
@@ -52,7 +52,7 @@ pipeline {
         stage('Integration Tests on Staging') {
             steps {
                 script {
-                    echo 'Running integration tests'
+                    echo 'Running integration tests with Selenium on staging environment.'
                 }
             }
         }
@@ -61,13 +61,13 @@ pipeline {
         stage('Deploy to Production') {
             steps {
                 script {
-                    echo 'Deploying to production environment'           
+                    echo 'Deploying to production environment with AWS CodeDeploy.'           
                 }
             }
         }
     }
-
-    //post scripts 3 
+    
+    //post scripts
     post {
         always {
             echo 'Pipeline completed - cleaning up.'
